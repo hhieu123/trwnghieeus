@@ -1,0 +1,13 @@
+RewriteEngine On
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{HTTPS} !=on [NC]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>
+RewriteRule ^dang-ky/$ /dang-ky.php [L]
+RewriteRule ^dang-nhap/$ /dang-nhap.php [L]
+RewriteRule ^quen-mat-khau$ /quen-mat-khau.php [L]
+RewriteRule ^nap-tien$ /tc.php [L]
+RewriteRule ^lich-su/$ /tm.php [L]
+RewriteRule ^dang-xuat/$ /dang-xuat.php [L]
+RewriteRule ^thong-tin/$ /profile.php [L]
